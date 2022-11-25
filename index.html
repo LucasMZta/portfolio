@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>Lucas Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Pinstripe&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsivo.css">
+
+    <!-- Font Icons -->
+    <script src="https://kit.fontawesome.com/78ae205c21.js" crossorigin="anonymous"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md d-flex p-0 nav">
+                <header class="header-mobile">
+                    <div class="nav-hambuguer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
+                <div class="header-close">
+
+                </div>
+                <header class="d-flex header flex-column px-3 py-2" id="tooltip" >
+                    <figure class="figure text-center mt-2 mb-0">
+                        <img src="assets/images/lucas.webp" width="140" height="140" class="figure-img rounded-50" alt="">
+                        <figcaption>
+                            <h5>Desenvolvedor Web Junior</h5>
+                            <ul class="list-inline mb-0 d-flex justify-content-around">
+                                <li class="list-inline-item me-0"><a href="" class="social_media_icon rounded-50"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GitHub"
+                                        data-bs-custom-class="custom-tooltip"><i class="fa-brands fa-github"></i></a>
+                                </li>
+                                <li class="list-inline-item me-0"><a href="" class="social_media_icon rounded-50"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="LinkedIn"
+                                        data-bs-custom-class="custom-tooltip"><i
+                                            class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li class="list-inline-item me-0"><a href="" class="social_media_icon rounded-50"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Facebook"
+                                        data-bs-custom-class="custom-tooltip"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item me-0"><a href="" class="social_media_icon rounded-50"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Instagram"
+                                        data-bs-custom-class="custom-tooltip"><i class="fa-brands fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                    <hr>
+                    <nav class="navbar navbar-expand-md py-0">
+                        <!-- <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#narbarMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button> -->
+                        <div class="navbar-collapse" id="navbarMenu">
+                            <ul class="navbar-nav flex-column w-100">
+                                <li class="nav-item ps-3"><a href="#teste" class="nav-link"><i
+                                            class="fa-solid fa-user"></i>Sobre Mim</a></li>
+                                <li class="nav-item ps-3"><a href="" class="nav-link"><i
+                                            class="fa-solid fa-briefcase"></i>O que faço</a></li>
+                                <li class="nav-item ps-3"><a href="" class="nav-link"><i
+                                            class="fa-solid fa-laptop-code"></i>Portfólios</a></li>
+                                <li class="nav-item ps-3"><a href="#contact" class="nav-link"><i
+                                            class="fa-regular fa-address-card"></i>Contatos</a></li>
+                                <li class="nav-item text-center mt-2"><button class="btn btn-success"><i
+                                            class="fa-solid fa-paper-plane me-2"></i>Contacte-me</button></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <hr>
+                    <div class="mt-auto px-2 d-flex align-items-center">
+                        <img src="assets/images/br.webp"  alt="">
+                        <span class="ms-2" id="horaAtual"></span>
+                    </div>
+                    <hr>
+                    <div class="dark_mode mt-auto">
+                        <div class="dark_title">
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                            <h5> Dark Mode </h5>
+                        </div>
+                        <input class="dark_input" id="darkmode" type="checkbox">
+                        <label class="dark_btn" for="darkmode"></label>
+                    </div>
+                </header>
+            </div>
+            <div class="col-md body">
+                <section>
+                    <!-- <section id="teste" style="height: 1000px;">
+                        ...
+                    </section> -->
+                    <hr>
+                    <footer class="px-6" id="contact">
+                        <div class="container-fluid">
+                            <h4 class="title-custom">Entre em Contato</h4>
+                            <div class="row">
+                                <div class="col-lg-6 h-100">
+                                    <form action="">
+                                        <div class="row g-3 mb-2">
+                                            <fieldset class="form-label col-md-6">
+                                                <input type="text" name="name" class="form-control rounded-0"
+                                                    placeholder="Nome">
+                                            </fieldset>
+                                            <fieldset class="form-label col-md-6">
+                                                <input type="text" name="lastname" class="form-control rounded-0"
+                                                    placeholder="Sobrenome">
+                                            </fieldset>
+                                        </div>
+                                        <div class="row g-3 mb-2">
+                                            <fieldset class="form-label col-md-7">
+                                                <input type="email" name="email" class="form-control rounded-0"
+                                                    placeholder="Email">
+                                            </fieldset>
+                                            <fieldset class="form-label col-md-5">
+                                                <input type="tel" name="phone" class="form-control rounded-0"
+                                                    placeholder="Telefone">
+                                            </fieldset>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <fieldset class="form-label">
+                                                <input type="text" name="assunto" class="form-control rounded-0"
+                                                    placeholder="Assunto">
+                                            </fieldset>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <fieldset class="form-label">
+                                                <textarea name="content" id="content" cols="30" rows="8" maxlength="800"
+                                                    placeholder="Mensagem" required class="form-control rounded-0"
+                                                    resize="no" style="resize: none;"></textarea>
+                                            </fieldset>
+                                        </div>
+                                        <button class="btn btn-success d-block">Enviar Mensagem </button>
+                                    </form>
+                                </div>
+                                <div class="col-lg-6 mt-2 mt-lg-0 h-100">
+                                    <div class="contact-address p-4">
+                                        <h5 class="mb-5">ENDEREÇO</h5>
+                                        <div class="d-flex mb-5 align-items-center">
+                                            <div class="contact-address-icon me-2">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </div>
+
+                                            <p>Piracicaba, SP - Brasil</p>
+                                        </div>
+                                        <div class="d-flex mb-5 align-items-center">
+                                            <div class="contact-address-icon me-2">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+
+                                            <p>contato@lucasdevs.com</p>
+                                        </div>
+                                        <div class="d-flex mb-5 align-items-center">
+                                            <div class="contact-address-icon me-2">
+                                                <i class="fa-solid fa-phone"></i>
+                                            </div>
+                                            <p> +55 (19) 99828-4188 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- SCRIPTS JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- SCRIPTS DO BOOTSTRAP -->
+    <script type="text/JavaScript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/JavaScript" src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- SCRIPT JS INDIVIDUAL -->
+    <script type="text/JavaScript" src="assets/js/script.js"></script>
+
+    <!--CODIGO NECESSARIO PARA O TOOLTIP FUNCIONAR-->
+    <script type="text/javascript">
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+</body>
+
+</html>
