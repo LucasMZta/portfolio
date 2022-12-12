@@ -3,18 +3,26 @@ let darkMode = document.querySelector('#darkmode');
 
 darkMode.addEventListener('click', function () {
     const header = document.querySelector('.header');
-    const headerMobile = document.querySelector('.header-mobile')
-    const button = document.querySelector('.nav-item .btn');
+    const body = document.querySelector('.body');
 
-    if (darkMode.checked) {
+    const headerMobile = document.querySelector('.header-mobile')
+    const buttonMenu = document.querySelector('.nav-item .btn');
+    const buttonFooter = document.querySelector('.footer .btn');
+
+    if (darkMode.checked) { 
+        // ESTILIZAÇÃO NO DARK MODE
         header.classList.add('header-dark');
+        body.classList.add('body-dark');
         headerMobile.classList.add('header-mobile-dark');
-        button.classList.replace('btn-success', 'btn-light');
+        buttonMenu.classList.replace('btn-success', 'btn-light');
+        buttonFooter.classList.replace('btn-success', 'btn-dark');
 
     } else {
         header.classList.remove('header-dark');
+        body.classList.remove('body-dark');
         headerMobile.classList.remove('header-mobile-dark');
-        button.classList.replace('btn-light', 'btn-success');
+        buttonMenu.classList.replace('btn-light', 'btn-success');
+        buttonFooter.classList.replace('btn-dark', 'btn-success');
     };
 });
 
@@ -34,17 +42,18 @@ navMobile.addEventListener('click', function () {
 
 
 //FUNCTION TIME
+function convertNumber(number) {
+    return (number < 10)?'0'+number:number;
+}
+
 const place = document.querySelector('#horaAtual');
-let d = new Date();
-place.innerText = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+let date = new Date();
+
+place.innerText = `${convertNumber(date.getDate())}/${convertNumber(date.getMonth() + 1)}/${date.getFullYear()} ${convertNumber(date.getHours())}:${convertNumber(date.getMinutes())}:${convertNumber(date.getSeconds())}`
 
 function getTime() {
     let date = new Date();
-    place.innerText = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+    place.innerText = `${convertNumber(date.getDate())}/${convertNumber(date.getMonth() + 1)}/${date.getFullYear()} ${convertNumber(date.getHours())}:${convertNumber(date.getMinutes())}:${convertNumber(date.getSeconds())}`
 }
 window.setInterval(getTime, 1000);
-
-// let date = new Date(2022,2,1,13,15,1);
-// console.log(`${date.getDate().padStart(2,'0')}/${date.getMonth()+1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
-
 
