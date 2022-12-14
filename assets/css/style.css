@@ -8,17 +8,58 @@ body {
     background-color: #FBFBFB;
     color: #445964;
 }
-h1,h2,h3,h4,h5 {
-    font-weight: 900;
-    
+p {
+    font-size: 1.1rem;
 }
+h1,h2,h3,h4{
+    font-weight: 900;
+}
+h3 {
+    font-size: 2.8rem;
+    color: #445964;
+}
+h3 span {
+    color: #263138;
+}
+.btn-dark-grey {
+    background-color: #263138!important;
+    color: #FFF!important;
+}
+.btn-dark-grey:hover {
+    background-color: #445964!important;
+    color: #FFF!important;
+}
+.btn-soft-grey {
+    background-color: #DFDFDF;
+    color: #445964;
+}
+.btn-soft-grey:hover {
+    background-color: #445964!important;
+    color: #FFF!important;
+}
+
+/* SESSION HEADER */
 .header .navbar {
     height: var(--height-header);
+}
+.header .navbar .nav-item::after {
+    content: '';
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    transition: width .4s linear;
+    display: block;
+}
+.header .navbar .nav-item:hover::after {
+    background-color: #445964;
+    width: 100%;
 }
 .header h5 {
     font-size: 1.8rem;
     font-weight: bold;
 }
+
+/* SESSION ABOUT */
 .about {
     /* background-color: aqua; */
     height: calc(100vh - var(--height-header));
@@ -34,3 +75,89 @@ h1,h2,h3,h4,h5 {
     color: inherit;
     margin-right: 1rem;
 }
+
+/* SESSION PORTFOLIOS */
+.portfolio {
+    min-height: 100vh;
+}
+.portfolio .row .col {
+    transition: .5s;
+}
+.portfolio-block {
+    background-color: #445964;
+    max-width: 360px;
+    height: 200px;
+    margin: auto;
+    color: #FFF;
+    transition: .5s;
+    text-align: center;
+}
+
+/* SESSION SKILLS */
+.skills {
+    min-height: 100vh;
+}
+.skills .skills-title {
+    text-align: center;
+}
+.skills .skills-title {
+    text-align: center;
+}
+.skills .skills-title p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+.skills .skills-title p:last-child {
+    color: #445964;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.skills .skills-title span {
+    color: #000;
+}
+.skills .skills-type img {
+    height: 5em;
+}
+
+
+@media (max-width: 992px) {
+    .header h5 {
+        font-size: 1.3rem;
+    }
+    .about .area-title h2 {
+        font-size: 3rem;
+    }
+    .about .area-title p {
+        font-size: 1rem;
+    }
+    .portfolio {
+        min-height: auto;
+    }
+    .skills {
+        min-height: auto;
+    }
+    .skills .skills-type img {
+        height: 4em;
+    }
+}
+@media (max-width: 576px) {
+    h3 {
+        font-size: 2.5rem;
+    }
+    .about .area-title h2 {
+        font-size: 2.5rem;
+    }
+    .skills .skills-type img {
+        height: 3em;
+    }
+}
+@media (max-width: 375px) {
+    h3 {
+        font-size: 2rem;
+    }
+    .about .area-title h2 {
+        font-size: 2.2rem;
+    }
+}
+
+

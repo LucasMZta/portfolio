@@ -21,11 +21,12 @@
     <!-- Font Icons -->
     <script src="https://kit.fontawesome.com/78ae205c21.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-md">
-                <div class="d-flex align-items-center">
+                <div class="d-none d-md-flex align-items-center">
                     <img src="assets/images/icon.svg" width="50">
                     <h5 class="mb-0 ms-3">Lucas Martins</h5>
                 </div>
@@ -34,61 +35,131 @@
                 </button>
                 <div class="navbar-collapse collapse" id="narbarMenu">
                     <ul class="navbar-nav align-items-center w-100 justify-content-end">
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">home</a></li>
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">sobre</a></li>
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">portfólio</a></li>
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">serviços</a></li>
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">resumo</a></li>
-                        <li class="nav-item ms-2 ms-lg-4"><a href="" class="nav-link">contato</a></li>
+                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Home</a></li>
+                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Sobre</a></li>
+                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Portfólio</a></li>
+                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Serviços</a></li>
+                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Resumo</a></li>
+                        <li class="nav-item ms-2 ms-lg-4"><a href="" class="nav-link">Contato</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-    <section class="about">
-        <div class="container h-100">
-            <div class="row h-100 pb-5">
-                <div class="col mt-auto">
-                    <div class="area-title mb-5">
-                        <p class="mb-0">Olá pessoas,</p>
-                        <h2>EU SOU UM <br> PROGRAMADOR</h2>
-                        <p>Seja bem-vindo ao meu portfólio website</p>
+    <main>
+        <section class="about">
+            <div class="container h-100">
+                <div class="row h-100 pb-5">
+                    <div class="col mt-auto text-center text-lg-start">
+                        <div class="area-title mb-5">
+                            <p class="mb-0">Olá,</p>
+                            <h2>EU SOU UM <br> PROGRAMADOR</h2>
+                            <p>Seja bem-vindo ao meu portfólio website</p>
+                        </div>
+                        <button type="button" class="btn btn-dark rounded-3 d-inline-block mb-5 mt-5">Saiba mais sobre
+                            mim</button>
+                        <div class="social-media mt-5">
+                            <a href="" data-bs-toggle="tooltip" data-bs-title="Github" data-bs-placement="bottom"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="" data-bs-toggle="tooltip" data-bs-title="Linkedin" data-bs-placement="bottom"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="" data-bs-toggle="tooltip" data-bs-title="Instagram" data-bs-placement="bottom"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://wa.me/+5519998284188" data-bs-toggle="tooltip" data-bs-title="WhatsApp" data-bs-placement="bottom" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-dark rounded-3 d-inline-block mb-5 mt-5">Saiba mais sobre mim</button>
-                    <div class="social-media mt-5">
-                        <a href="" data-bs-toggle="tooltip" data-bs-title="Github" data-bs-placement="bottom"><i class="fa-brands fa-github"></i></a>
-                        <a href="" data-bs-toggle="tooltip" data-bs-title="Linkedin" data-bs-placement="bottom"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="" data-bs-toggle="tooltip" data-bs-title="Instagram" data-bs-placement="bottom"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="d-none d-lg-block col mt-auto">
+                        <img class="img-fluid ps-5 pt-5" src="assets/images/person.svg" alt="">
                     </div>
-                </div>
-                <div class="col mt-auto">
-                    <img class="img-fluid ps-5 pt-5" src="assets/images/person.svg" alt="">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section class="portfolio py-5">
+            <div class="container">
+                <div class="d-flex align-items-end flex-wrap">
+                    <div class="title pe-5">
+                        <h3><span>Meu</span><br> Portfólio</h3>
+                    </div>
+                    <div class="desc pt-3 pt-md-0 ps-md-5">
+                        <p>Estes são alguns dos trabalhos e <br class="d-none d-sm-block"> projetos que já realizei</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap py-4">
+                    <button class="btn btn-dark-grey btn-soft-grey mt-3 me-3" type="button" data-bs-type="all">Todos</button>
+                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="adv">Advocacia</button>
+                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="food">Food</button>
+                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="tech">Tecnologia</button>
+                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="keep">Em Andamento</button>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 px-md-5 mx-md-5">
+                    <div class="col mb-3 filterDiv" data-bs-type="adv">
+                        <div class="portfolio-block rounded-1">
+                            ADV
+                        </div>
+                    </div>
+                    <div class="col mb-3 filterDiv" data-bs-type="adv">
+                        <div class="portfolio-block rounded-1">
+                            ADV
+                        </div>
+                    </div>
+                    <div class="col mb-3 filterDiv" data-bs-type="food">
+                        <div class="portfolio-block rounded-1">
+                            FOOD
+                        </div>
+                    </div>
+                    <div class="col mb-3 filterDiv" data-bs-type="food">
+                        <div class="portfolio-block rounded-1">
+                            FOOD
+                        </div>
+                    </div>
+                    <div class="col mb-3 filterDiv" data-bs-type="tech">
+                        <div class="portfolio-block rounded-1">
+                            TECH
+                        </div>
+                    </div>
+                    <div class="col mb-3 filterDiv" data-bs-type="tech">
+                        <div class="portfolio-block rounded-1">
+                            TECH
+                        </div>
+                    </div>
+                </div>
 
-    <!-- <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap"></use>
-            </svg>
-            <span class="fs-4">Simple header</span>
-        </a>
+                    <!-- adicionar uma ideia de paginação depois aqui -->
+            </div>
+        </section>
+        <section class="skills py-5">
+            <div class="container">
+                <div class="area-title text-center pb-5">
+                    <h3><span>Minhas</span> Techs</h3>
+                </div>
+                <div class="d-flex flex-column align-items-center pb-5">
+                    <div class="skills-title">
+                        <p class="mb-0">Tecnologias </p> 
+                        <p>Já <span>utilizadas</span></p>
+                    </div>
+                    <div class="skills-type pt-3">
+                        <img src="assets/images/html.svg" class="img mx-2 mx-md-4" alt="HTML 5" data-bs-toggle="tooltip" data-bs-title="HTML 5" data-bs-placement="bottom" >
+                        <img src="assets/images/css.svg" class="img mx-2 mx-md-4" alt="CSS" data-bs-toggle="tooltip" data-bs-title="CSS 3" data-bs-placement="bottom">
+                        <img src="assets/images/js.svg" class="img mx-2 mx-md-4" alt="Javascript" data-bs-toggle="tooltip" data-bs-title="Javascript" data-bs-placement="bottom">
+                        <img src="assets/images/bootstrap.svg" class="img mx-2 mx-md-4" alt="Bootstrap 5" data-bs-toggle="tooltip" data-bs-title="Bootstrap" data-bs-placement="bottom">
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-center pt-5">
+                    <div class="skills-title">
+                        <p class="mb-0">Tecnologias </p> 
+                        <p>Atualmente <span>desenvolvendo</span></p>
+                    </div>
+                    <div class="skills-type pt-3">
+                        <img src="assets/images/vue.svg" class="img mx-2 mx-md-4" alt="vue" data-bs-toggle="tooltip" data-bs-title="Vue.js" data-bs-placement="bottom">
+                        <img src="assets/images/node.svg" class="img mx-2 mx-md-4" alt="node" data-bs-toggle="tooltip" data-bs-title="Node.js" data-bs-placement="bottom">
+                        <img src="assets/images/react.svg" class="img mx-2 mx-md-4" alt="react" data-bs-toggle="tooltip" data-bs-title="React.js" data-bs-placement="bottom">
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        </ul>
-    </header> -->
-
-
-
-
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 

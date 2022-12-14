@@ -1,59 +1,33 @@
-//DARK MODE FUNCTION 
-let darkMode = document.querySelector('#darkmode');
 
-darkMode.addEventListener('click', function () {
-    const header = document.querySelector('.header');
-    const body = document.querySelector('.body');
+function filterDiv(e) {
+    let clicked = e.currentTarget.getAttribute('data-bs-type');
+    const obj = e.currentTarget;
 
-    const headerMobile = document.querySelector('.header-mobile')
-    const buttonMenu = document.querySelector('.nav-item .btn');
-    const buttonFooter = document.querySelector('.footer .btn');
+    filter.forEach(removeClass => {
+        removeClass.classList.remove('btn-dark-grey');
+    });
+    
+    obj.classList.add('btn-dark-grey');
 
-    if (darkMode.checked) { 
-        // ESTILIZAÇÃO NO DARK MODE
-        header.classList.add('header-dark');
-        body.classList.add('body-dark');
-        headerMobile.classList.add('header-mobile-dark');
-        buttonMenu.classList.replace('btn-success', 'btn-light');
-        buttonFooter.classList.replace('btn-success', 'btn-dark');
+    let filterDivs = document.querySelectorAll('.filterDiv');
 
-    } else {
-        header.classList.remove('header-dark');
-        body.classList.remove('body-dark');
-        headerMobile.classList.remove('header-mobile-dark');
-        buttonMenu.classList.replace('btn-light', 'btn-success');
-        buttonFooter.classList.replace('btn-dark', 'btn-success');
-    };
-});
+    filterDivs.forEach(filt => {
+        let type = filt.getAttribute('data-bs-type');
+        if(clicked === 'all') {
+            filt.classList.remove('d-none');
+        } else if (type != clicked) {
+            filt.classList.add('d-none');
+        } else {
+            filt.classList.remove('d-none');
+        }
+    })
 
-let navMobile = document.querySelector('.header-mobile');
-const headerClose = document.querySelector('.header-close');
-const tooltip = document.querySelector('#tooltip');
+}
 
-
-headerClose.addEventListener('click', function () {
-    tooltip.classList.toggle('w-mobile');
-    headerClose.classList.toggle('header-close-open');
-})
-navMobile.addEventListener('click', function () {
-    tooltip.classList.toggle('w-mobile');
-    headerClose.classList.toggle('header-close-open');
+let filter = document.querySelectorAll('.portfolio .btn');
+filter.forEach(action => {
+    action.addEventListener('click',filterDiv);
 });
 
 
-//FUNCTION TIME
-function convertNumber(number) {
-    return (number < 10)?'0'+number:number;
-}
-
-const place = document.querySelector('#horaAtual');
-let date = new Date();
-
-place.innerText = `${convertNumber(date.getDate())}/${convertNumber(date.getMonth() + 1)}/${date.getFullYear()} ${convertNumber(date.getHours())}:${convertNumber(date.getMinutes())}:${convertNumber(date.getSeconds())}`
-
-function getTime() {
-    let date = new Date();
-    place.innerText = `${convertNumber(date.getDate())}/${convertNumber(date.getMonth() + 1)}/${date.getFullYear()} ${convertNumber(date.getHours())}:${convertNumber(date.getMinutes())}:${convertNumber(date.getSeconds())}`
-}
-window.setInterval(getTime, 1000);
 
