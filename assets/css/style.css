@@ -47,7 +47,7 @@ h3 span {
     width: 1px;
     height: 1px;
     background-color: transparent;
-    transition: width .4s linear;
+    transition: width .35s linear;
     display: block;
 }
 .header .navbar .nav-item:hover::after {
@@ -91,7 +91,45 @@ h3 span {
     color: #FFF;
     transition: .5s;
     text-align: center;
+    position: relative;
 }
+.portfolio-block a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: relative;
+}
+.portfolio-block .portfolio-details {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+}
+.portfolio-block.quadro-desenho{
+    background-image: url(../images/portfolios/quadro-desenho.webp);
+    background-size: cover;
+    background-position: center;
+}
+.filterD:hover:not(a:hover) .portfolio-block:not(:hover) {
+    opacity: .7;
+}
+.filterDiv:hover .portfolio-block {
+    scale: 1.05;
+}
+.portfolio-block:hover > .portfolio-details {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
+}
+
+
 
 /* SESSION SKILLS */
 .skills {
