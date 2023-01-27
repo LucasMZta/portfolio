@@ -21,13 +21,12 @@
     <!-- Font Icons -->
     <script src="https://kit.fontawesome.com/78ae205c21.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header class="header" id="home">
-        <div class="container">
+        <div class="container-fluid container">
             <nav class="navbar navbar-expand-md">
                 <div class="d-none d-md-flex align-items-center">
-                    <img src="assets/images/icon.svg" width="50">
+                    <i class="fa-solid fa-code"></i>
                     <h5 class="mb-0 ms-3">Lucas Martins</h5>
                 </div>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#narbarMenu">
@@ -41,6 +40,7 @@
                         <!-- <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Serviços</a></li>-->
                         <!-- <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Resumo</a></li>  -->
                         <li class="nav-item ms-2 ms-lg-4"><a href="" class="nav-link">Contato</a></li>
+                        <li class="nav-item ms-2 ms-lg-4 dark-mode-link"><a href="#" class="nav-link">Dark Mode <i class="fa-solid fa-lightbulb"></i></li>
                     </ul>
                 </div>
             </nav>
@@ -48,7 +48,7 @@
     </header>
     <main>
         <section class="about" id="about">
-            <div class="container h-100">
+            <div class="container-md h-100">
                 <div class="row h-100 pb-5">
                     <div class="col mt-auto text-center text-lg-start">
                         <div class="area-title mb-5">
@@ -56,16 +56,15 @@
                             <h2>EU SOU UM <br> PROGRAMADOR</h2>
                             <p>Seja bem-vindo ao meu portfólio website</p>
                         </div>
-                        <button type="button" class="btn btn-dark rounded-3 d-inline-block mb-5 mt-5">Saiba mais sobre
-                            mim</button>
+                        <button type="button" class="btn btn-dark rounded-3 d-inline-block mb-5 mt-5">Saiba mais sobre mim</button>
                         <div class="social-media mt-5">
-                            <a href="" data-bs-toggle="tooltip" data-bs-title="Github" data-bs-placement="bottom"><i
+                            <a href="" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="Github" data-bs-placement="bottom"><i
                                     class="fa-brands fa-github"></i></a>
-                            <a href="" data-bs-toggle="tooltip" data-bs-title="Linkedin" data-bs-placement="bottom"><i
+                            <a href="" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="Linkedin" data-bs-placement="bottom"><i
                                     class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="" data-bs-toggle="tooltip" data-bs-title="Instagram" data-bs-placement="bottom"><i
+                            <a href="" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="Instagram" data-bs-placement="bottom"><i
                                     class="fa-brands fa-instagram"></i></a>
-                            <a href="https://wa.me/+5519998284188" data-bs-toggle="tooltip" data-bs-title="WhatsApp" data-bs-placement="bottom" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://wa.me/+5519998284188" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="WhatsApp" data-bs-placement="bottom" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div class="d-none d-lg-block col mt-auto">
@@ -140,11 +139,11 @@
                         <p class="mb-0">Tecnologias </p> 
                         <p>Já utilizadas no <span>dia a dia</span></p>
                     </div>
-                    <div class="skills-type pt-3">
-                        <img src="assets/images/html.svg" class="img mx-2 mx-md-4" alt="HTML 5" data-bs-toggle="tooltip" data-bs-title="HTML 5" data-bs-placement="bottom" >
-                        <img src="assets/images/css.svg" class="img mx-2 mx-md-4" alt="CSS" data-bs-toggle="tooltip" data-bs-title="CSS 3" data-bs-placement="bottom">
-                        <img src="assets/images/js.svg" class="img mx-2 mx-md-4" alt="Javascript" data-bs-toggle="tooltip" data-bs-title="Javascript" data-bs-placement="bottom">
-                        <img src="assets/images/bootstrap.svg" class="img mx-2 mx-md-4" alt="Bootstrap 5" data-bs-toggle="tooltip" data-bs-title="Bootstrap" data-bs-placement="bottom">
+                    <div class="skills-type d-flex align-items-center pt-3">
+                        <i class="fa-brands fa-html5 mx-2 mx-md-4 white" alt="HTML 5" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="HTML 5" data-bs-placement="bottom"></i>
+                        <i class="fa-brands fa-css3-alt mx-2 mx-md-4 black" alt="CSS" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="CSS 3" data-bs-placement="bottom"></i>
+                        <i class="fa-brands fa-js mx-2 mx-md-4 white" alt="Javascript" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Javascript" data-bs-placement="bottom"></i>
+                        <i class="fa-brands fa-bootstrap mx-2 mx-md-4 black" alt="Bootstrap 5" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Bootstrap" data-bs-placement="bottom"></i>
                     </div>
                 </div>
                 <div class="d-flex flex-column align-items-center pt-5">
@@ -153,9 +152,9 @@
                         <p>Atualmente <span>desenvolvendo</span></p>
                     </div>
                     <div class="skills-type pt-3">
-                        <img src="assets/images/react.svg" class="img mx-2 mx-md-4" alt="react" data-bs-toggle="tooltip" data-bs-title="React.js" data-bs-placement="bottom">
-                        <img src="assets/images/vue.svg" class="img mx-2 mx-md-4" alt="vue" data-bs-toggle="tooltip" data-bs-title="Vue.js" data-bs-placement="bottom">
-                        <img src="assets/images/node.svg" class="img mx-2 mx-md-4" alt="node" data-bs-toggle="tooltip" data-bs-title="Node.js" data-bs-placement="bottom">
+                        <img src="assets/images/react.svg" class="img mx-2 mx-md-4" alt="react" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="React.js" data-bs-placement="bottom">
+                        <img src="assets/images/vue.svg" class="img mx-2 mx-md-4" alt="vue" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Vue.js" data-bs-placement="bottom">
+                        <img src="assets/images/node.svg" class="img mx-2 mx-md-4" alt="node" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Node.js" data-bs-placement="bottom">
                         
 
                     </div>

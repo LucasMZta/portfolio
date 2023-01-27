@@ -1,4 +1,3 @@
-
 function filterDiv(e) {
     let clicked = e.currentTarget.getAttribute('data-bs-type');
     const obj = e.currentTarget;
@@ -21,13 +20,30 @@ function filterDiv(e) {
             filt.classList.remove('d-none');
         }
     })
+}
+function darkMode() {
+    let lightBtn = `<i class="fa-regular fa-lightbulb"></i>`;
+    let darkBtn = `<i class="fa-solid fa-lightbulb">`;
+    let a = document.querySelector('.dark-mode-link a');
+    let i = document.querySelector('.dark-mode-link i');
+    let tagHtml = document.querySelector('html');
 
+    if(i.classList.contains('fa-solid')) {
+        a.innerHTML = `Light Mode ${lightBtn}`;
+        i.classList.replace('fa-solid','fa-regular');
+    } else {
+        a.innerHTML = `Dark Mode ${darkBtn}`;
+        i.classList.replace('fa-regular','fa-solid');
+    }
+    
+    tagHtml.classList.toggle('dark-mode');
 }
 
 let filter = document.querySelectorAll('.portfolio .btn');
 filter.forEach(action => {
     action.addEventListener('click',filterDiv);
 });
+document.querySelector('.dark-mode-link').addEventListener('click', darkMode);
 
 
 

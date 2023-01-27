@@ -1,12 +1,28 @@
 :root {
-    --height-header: 80px
+    --height-header: 80px;
+    --bg-color: #FBFBFB;
+    --color-grey: #445964;
+    --color-dark-grey: #212529;
+    --color-hover-dark-grey: #424649;
+    --bs-tooptip: #222;
 }
+.dark-mode:root {
+    --bg-color: #121212;
+    --color-grey: #FEFEFE;
+    --color-dark-grey: #4764FD;
+    --color-hover-dark-grey: #748aff;
+    --bs-tooptip: #4764FD;
+}
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-tooptip)!important;
+}
+
 html {
     font-family: 'Roboto', sans-serif ;
 }
 body {
-    background-color: #FBFBFB;
-    color: #445964;
+    background-color: var(--bg-color);
+    color: var(--color-grey);
 }
 p {
     font-size: 1.1rem;
@@ -16,7 +32,7 @@ h1,h2,h3,h4{
 }
 h3 {
     font-size: 2.8rem;
-    color: #445964;
+    color: var(--color-grey);
 }
 h3 span {
     color: #263138;
@@ -26,21 +42,24 @@ h3 span {
     color: #FFF!important;
 }
 .btn-dark-grey:hover {
-    background-color: #445964!important;
+    background-color: var(--color-grey)!important;
     color: #FFF!important;
 }
 .btn-soft-grey {
     background-color: #DFDFDF;
-    color: #445964;
+    color: var(--color-grey);
 }
 .btn-soft-grey:hover {
-    background-color: #445964!important;
+    background-color: var(--color-grey)!important;
     color: #FFF!important;
 }
 
 /* SESSION HEADER */
 .header .navbar {
     height: var(--height-header);
+}
+.header .navbar i.fa-code {
+    font-size: 2.5rem;
 }
 .header .navbar .nav-item::after {
     content: '';
@@ -51,8 +70,15 @@ h3 span {
     display: block;
 }
 .header .navbar .nav-item:hover::after {
-    background-color: #445964;
+    background-color: var(--color-grey);
     width: 100%;
+}
+.header .nav-item a {
+    color: var(--color-grey);
+}
+.header .nav-item i {
+    margin-left: 5px;
+    font-size: 1.3em
 }
 .header h5 {
     font-size: 1.8rem;
@@ -75,6 +101,12 @@ h3 span {
     color: inherit;
     margin-right: 1rem;
 }
+.about .btn-dark {
+    background-color: var(--color-dark-grey);
+}
+.about .btn-dark:hover {
+    background-color: var(--color-hover-dark-grey);
+}
 
 /* SESSION PORTFOLIOS */
 .portfolio {
@@ -84,7 +116,7 @@ h3 span {
     transition: .5s;
 }
 .portfolio-block {
-    background-color: #445964;
+    background-color: var(--color-grey);
     max-width: 360px;
     height: 200px;
     margin: auto;
@@ -146,15 +178,21 @@ h3 span {
     font-size: 1.3rem;
 }
 .skills .skills-title p:last-child {
-    color: #445964;
+    color: var(--color-grey);
     font-size: 1.5rem;
     font-weight: bold;
 }
 .skills .skills-title span {
     color: #000;
 }
-.skills .skills-type img {
-    height: 5em;
+.skills .skills-type i {
+    font-size: 6.5em;
+}
+.skills .skills-type i.black {
+    color: #000;
+}
+.skills .skills-type i.white {
+    color: #445964;
 }
 
 
