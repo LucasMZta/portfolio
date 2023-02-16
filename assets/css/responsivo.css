@@ -2,13 +2,15 @@
     .container {
         width: 70rem;
     }
+    .portfolio-projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media(max-width: 1200px) {
     .container {
         width: 58rem;
     }
-
     .about--description {
         width: 30rem;
     }
@@ -18,9 +20,11 @@
     .container {
         width: 45rem;
     }
-
     .about--description {
         width: 28rem;
+    }
+    .portfolio-projects {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -29,21 +33,25 @@
         width: 100vw;
         padding: 0 2rem;
     }
+    .portfolio-projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .navbar {
-        display: block;
+        padding-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+        justify-items: end;
         height: auto;
         min-height: var(--height-header);
     }
-    .navbar--dev {
-        display: none;
-    }
     .navbar--nav {
+        display: none;
         transition: all .5s ease;
         height: 0px;
         opacity: 0;
     }
     .navbar--list {
-        display: none;
         text-align: center;
         font-size: 1.2em;
     }
@@ -68,4 +76,21 @@
     html {
         font-size: 14px;
     }
+    .title--section {
+        display: block!important;
+    }
+    .title--section__desc {
+        margin-left: 0;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}
+@media(max-width: 425px) {
+    html {
+        font-size: 13px;
+    } 
+    .portfolio--types .btn {
+        margin: 3rem .5rem 3rem 0;
+        font-size: 0.8rem;
+    } 
 }

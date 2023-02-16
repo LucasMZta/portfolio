@@ -9,7 +9,13 @@ document.querySelector('.menu-faketrigger').addEventListener('click', toggleMobi
 document.querySelectorAll('.social-media--item').forEach(item => {
     item.addEventListener('mouseover', showSpan);
 });
+document.querySelectorAll('.techs--logos__item').forEach(item =>{
+    item.addEventListener('mouseover', showSpan);
+});
 document.querySelectorAll('.social-media--item').forEach(item => {
+    item.addEventListener('mouseout', hireSpan);
+});
+document.querySelectorAll('.techs--logos__item').forEach(item =>{
     item.addEventListener('mouseout', hireSpan);
 });
 
@@ -55,6 +61,7 @@ function darkMode() {
 function toggleMobile() {
     document.querySelector('.navbar--nav').classList.toggle('showMobile');
 }
+
 function showSpan(e) {
     let top = e.currentTarget.offsetTop;
     let span = e.currentTarget.querySelector('span');
@@ -65,7 +72,7 @@ function showSpan(e) {
     }, 300);
 }
 function hireSpan(e) {
-    let top = e.currentTarget.offsetTop;
+    console.log('sumiu')
     let span = e.currentTarget.querySelector('span');
     span.style.top = `0`;
     span.style.display = 'none';
