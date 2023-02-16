@@ -29,15 +29,29 @@
 }
 
 @media(max-width: 769px) {
+    :root {
+        --height-header: 60px;
+    }
     .container {
         width: 100vw;
         padding: 0 2rem;
     }
+    .header {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 99999;
+        background-color: inherit;
+        box-shadow: 2px 0px 4px 4px #CCC;
+    }
     .portfolio-projects {
         grid-template-columns: repeat(1, 1fr);
     }
+    .portfolio--types {
+        justify-content: center;
+    }
     .navbar {
-        padding-top: 2rem;
+        padding: 1rem 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: flex-start;
@@ -88,9 +102,21 @@
 @media(max-width: 425px) {
     html {
         font-size: 13px;
-    } 
+    }
+    .portfolio-projects {
+
+    }
     .portfolio--types .btn {
         margin: 3rem .5rem 3rem 0;
         font-size: 0.8rem;
-    } 
+    }
+    .portfolio--projects--item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects--picture {
+        width: 18rem;
+    }
 }

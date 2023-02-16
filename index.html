@@ -19,7 +19,7 @@
     <script src="https://kit.fontawesome.com/78ae205c21.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="home">
     <header class="header">
         <div class="container">
             <nav class="navbar">
@@ -40,7 +40,7 @@
                         <li class="navbar--list__item"><a href="#home" class="nav-link">Home</a></li>
                         <li class="navbar--list__item"><a href="#about" class="nav-link">Sobre</a></li>
                         <li class="navbar--list__item"><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                        <li class="navbar--list__item"><a href="" class="nav-link">Contato</a></li>
+                        <li class="navbar--list__item"><a href="#" class="nav-link">Contato</a></li>
                         <!-- <li class="nav-item ms-2 ms-lg-4 dark-mode-link"><a href="#" class="nav-link">Dark Mode <i class="fa-solid fa-lightbulb"></i></li> -->
                     </ul>
                 </div>
@@ -184,7 +184,25 @@
     </footer>
     <!-- SCRIPT JS INDIVIDUAL -->
     <script type="text/JavaScript" src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '50px',
+            duration: 2000,
+            reset: true
+        });
+        ScrollReveal().reveal('.techs--logos', { delay: 400 });
 
+        const src = ScrollReveal({
+            origin: 'left',
+            distance: '50px',
+            duration: 2000,
+            reset: true
+        });
+        ScrollReveal().reveal('.portfolio--projects--item', { delay: 200 });
+        ScrollReveal().reveal('.about--picture', { delay: 400 });
+</script>
 </body>
 
 </html>
