@@ -11,182 +11,136 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
     <title>Lucas Development</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg" href="assets/images/dev.svg" />
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/responsivo.css">
-
     <!-- Font Icons -->
     <script src="https://kit.fontawesome.com/78ae205c21.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header class="header" id="home">
-        <div class="container-fluid container">
-            <nav class="navbar navbar-expand-md">
-                <div class="d-none d-md-flex align-items-center">
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar--dev">
                     <i class="fa-solid fa-code"></i>
-                    <h5 class="mb-0 ms-3">Lucas Martins</h5>
+                    <h5 class="navbar--dev__name">Lucas Martins</h5>
                 </div>
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#narbarMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse" id="narbarMenu">
-                    <ul class="navbar-nav align-items-center w-100 justify-content-end">
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="#home" class="nav-link">Home</a></li>
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="#about" class="nav-link">Sobre</a></li>
-                        <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="#portfolio" class="nav-link">Portfólio</a></li>
-                        <!-- <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Serviços</a></li>-->
-                        <!-- <li class="nav-item me-2 me-lg-4 ms-2 ms-lg-4"><a href="" class="nav-link">Resumo</a></li>  -->
-                        <li class="nav-item ms-2 ms-lg-4"><a href="" class="nav-link">Contato</a></li>
-                        <li class="nav-item ms-2 ms-lg-4 dark-mode-link"><a href="#" class="nav-link">Dark Mode <i class="fa-solid fa-lightbulb"></i></li>
+                <div class="navbar--mobile">
+                    <input type="checkbox" class="menu-faketrigger">
+                    <div class="navbar--mobile_items">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="navbar--nav" id="narbarMenu">
+                    <ul class="navbar--list">
+                        <li class="navbar--list__item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="navbar--list__item"><a href="#about" class="nav-link">Sobre</a></li>
+                        <li class="navbar--list__item"><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                        <li class="navbar--list__item"><a href="" class="nav-link">Contato</a></li>
+                        <!-- <li class="nav-item ms-2 ms-lg-4 dark-mode-link"><a href="#" class="nav-link">Dark Mode <i class="fa-solid fa-lightbulb"></i></li> -->
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
     <main>
-        <section class="about" id="about">
-            <div class="container-md h-100">
-                <div class="row h-100 align-items-center pb-5">
-                    <div class="col d-flex flex-column align-items-center text-center text-lg-start">
-                        <div class="area-title mb-5">
-                            <p class="mb-0">Olá,</p>
-                            <h2>EU SOU UM <br> PROGRAMADOR</h2>
-                            <p>Seja bem-vindo ao meu portfólio website</p>
-                        </div>
-                        <button type="button" class="btn btn-dark rounded-3 d-inline-block mb-5 mt-5">Saiba mais sobre mim</button>
-                        <div class="social-media mt-5">
-                            <a href="" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="Github" data-bs-placement="bottom"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a href="" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="Linkedin" data-bs-placement="bottom"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="Instagram" data-bs-placement="bottom"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="https://wa.me/+5519998284188" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="WhatsApp" data-bs-placement="bottom" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        </div>
+        <section class="about">
+            <div class="container">
+                <div class="about--description">
+                    <div class="about--description__title">
+                        <p>Olá,</p>
+                        <h2>EU SOU UM <br> PROGRAMADOR</h2>
+                        <p>Seja bem-vindo ao meu portfólio website</p>
                     </div>
-                    <div class="d-none d-lg-flex align-items-center col">
-                        <img class="img-fluid ps-5 pt-5" src="assets/images/person.svg" alt="">
+                    <div class="about--btn">
+                        <button class="btn btn__dark-grey">Saiba mais sobre mim</button>
+                    </div>
+                    <div class="about--social-media">
+                        <a class="social-media--item" href=""><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+                        <a class="social-media--item" href=""><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a>
+                        <a class="social-media--item" href=""><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                        <a class="social-media--item" href="https://wa.me/+5519998284188"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+                    </div>
+                </div>
+                <div class="about--picture">
+
+                </div>
+            </div>
+        </section>
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="title--section">
+                    <h2 class="title--section__title"><span>Meu </span><br><span>Portfólio</span></h2>
+                    <p class="title--section__desc">Estes são alguns dos trabalhos e <br> projetos que já realizei</p>
+                </div>
+                <div class="portfolio--types">
+                    <button class="btn btn__dark-grey" data-bs-type="all">Todos</button>
+                    <button class="btn btn__soft-grey" data-bs-type="fim">Finalizados</button>
+                    <button class="btn btn__soft-grey" data-bs-type="and">Em Andamento</button>
+                </div>
+                <div class="portfolio-projects">
+                    <div class="portfolio--projects--item" data-bs-type="fim">
+                        <div class="projects--picture"> FINALIZADO </div>
+                        <div class="projects--name">Nome do Projeto</div>
+                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
+                        <button class="btn btn__grey">Visualizar</button>
+                    </div>
+                    <div class="portfolio--projects--item" data-bs-type="fim">
+                        <div class="projects--picture"> FINALIZADO</div>
+                        <div class="projects--name">Nome do Projeto</div>
+                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
+                        <button class="btn btn__grey">Visualizar</button>
+                    </div>
+                    <div class="portfolio--projects--item" data-bs-type="and">
+                        <div class="projects--picture"> EM ANDAMENTO</div>
+                        <div class="projects--name">Nome do Projeto</div>
+                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
+                        <button class="btn btn__grey">Visualizar</button>
+                    </div>
+                    <div class="portfolio--projects--item" data-bs-type="and">
+                        <div class="projects--picture"> EM ANDAMENTO</div>
+                        <div class="projects--name">Nome do Projeto</div>
+                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
+                        <button class="btn btn__grey">Visualizar</button>
+                    </div>
+                    <div class="portfolio--projects--item" data-bs-type="fim">
+                        <div class="projects--picture"> FINALIZADO </div>
+                        <div class="projects--name">Nome do Projeto</div>
+                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
+                        <button class="btn btn__grey">Visualizar</button>
+                    </div>
+                    <div class="portfolio--projects--item" data-bs-type="fim">
+                        <div class="projects--picture">FINALIZADO</div>
+                        <div class="projects--name">Nome do Projeto</div>
+                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
+                        <button class="btn btn__grey">Visualizar</button>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="portfolio py-5" id="portfolio">
+        <section class="techs">
             <div class="container">
-                <div class="d-flex align-items-end flex-wrap">
-                    <div class="title pe-5">
-                        <h3><span>Meu</span><br> Portfólio</h3>
-                    </div>
-                    <div class="desc pt-3 pt-md-0 ps-md-5">
-                        <p>Estes são alguns dos trabalhos e <br class="d-none d-sm-block"> projetos que já realizei</p>
-                    </div>
-                </div>
-                <div class="d-flex flex-wrap py-4">
-                    <button class="btn btn-dark-grey btn-soft-grey mt-3 me-3" type="button" data-bs-type="all">Todos</button>
-                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="adv">Advocacia</button>
-                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="games">Jogos</button>
-                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="tech">Tecnologia</button>
-                    <button class="btn btn-soft-grey mt-3 me-3" type="button" data-bs-type="keep">Em Andamento</button>
-                </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mx-md-5 filterD">
-                    <div class="col mb-3 filterDiv" data-bs-type="adv">
-                        <div class="portfolio-block rounded-1">
-                            ADV
-                        </div>
-                    </div>
-                    <div class="col mb-3 filterDiv" data-bs-type="adv">
-                        <div class="portfolio-block rounded-1">
-                            ADV
-                        </div>
-                    </div>
-                    <div class="col mb-3 filterDiv" data-bs-type="food">
-                        <div class="portfolio-block rounded-1">
-                            FOOD
-                        </div>
-                    </div>
-                    <div class="col mb-3 filterDiv" data-bs-type="food">
-                        <div class="portfolio-block rounded-1">
-                            <a href="https://lucasmzta.github.io/quadro-desenho/" target="_blank">FOOD</a>
-                        </div>
-                    </div>
-                    <div class="col mb-3 filterDiv" data-bs-type="tech">
-                        <div class="portfolio-block rounded-1">
-                            <a href="https://lucasmzta.github.io/quadro-desenho/" target="_blank">TECH</a>
-                        </div>
-                    </div>
-                    <div class="col mb-3 filterDiv" data-bs-type="games">
-                        <div class="portfolio-block rounded-1 quadro-desenho">
-                            <a href="https://lucasmzta.github.io/quadro-desenho/" target="_blank"></a>
-                            <div class="portfolio-details rounded-1 d-flex align-items-center justify-content-center">
-                                <h4>Desenhando no Canvas</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    <!-- adicionar uma ideia de paginação depois aqui -->
-            </div>
-        </section>
-        <section class="skills py-5">
-            <div class="container">
-                <div class="area-title text-center pb-5">
-                    <h3><span>Minhas</span> Techs</h3>
-                </div>
-                <div class="d-flex flex-column align-items-center pb-5">
-                    <div class="skills-title">
-                        <p class="mb-0">Tecnologias </p> 
-                        <p>Já utilizadas no <span>dia a dia</span></p>
-                    </div>
-                    <div class="skills-type d-flex align-items-center pt-3">
-                        <i class="fa-brands fa-html5 mx-2 mx-md-4 white" alt="HTML 5" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="HTML 5" data-bs-placement="bottom"></i>
-                        <i class="fa-brands fa-css3-alt mx-2 mx-md-4 black" alt="CSS" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="CSS 3" data-bs-placement="bottom"></i>
-                        <i class="fa-brands fa-js mx-2 mx-md-4 white" alt="Javascript" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Javascript" data-bs-placement="bottom"></i>
-                        <i class="fa-brands fa-bootstrap mx-2 mx-md-4 black" alt="Bootstrap 5" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Bootstrap" data-bs-placement="bottom"></i>
-                    </div>
-                </div>
-                <div class="d-flex flex-column align-items-center pt-5">
-                    <div class="skills-title">
-                        <p class="mb-0">Tecnologias </p> 
-                        <p>Atualmente <span>desenvolvendo</span></p>
-                    </div>
-                    <div class="skills-type pt-3">
-                        <img src="assets/images/react.svg" class="img mx-2 mx-md-4" alt="react" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="React.js" data-bs-placement="bottom">
-                        <img src="assets/images/vue.svg" class="img mx-2 mx-md-4" alt="vue" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Vue.js" data-bs-placement="bottom">
-                        <img src="assets/images/node.svg" class="img mx-2 mx-md-4" alt="node" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-title="Node.js" data-bs-placement="bottom">
-                        
-
-                    </div>
+                <div class="title--section">
+                    <h2 class="title--section__title"><span>Minhas </span><span>Techs</span></h2>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        
+
     </footer>
-
-
-
-
-
-
-
-    <!-- SCRIPTS JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- SCRIPTS DO BOOTSTRAP -->
-    <script type="text/JavaScript" src="assets/js/bootstrap.bundle.min.js"></script>
-    <script type="text/JavaScript" src="assets/js/jquery-3.6.1.min.js"></script>
-
     <!-- SCRIPT JS INDIVIDUAL -->
     <script type="text/JavaScript" src="assets/js/script.js"></script>
-
-    <!--CODIGO NECESSARIO PARA O TOOLTIP FUNCIONAR-->
-    <script type="text/javascript">
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
 
 </body>
 
