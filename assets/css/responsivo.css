@@ -103,9 +103,6 @@
     html {
         font-size: 13px;
     }
-    .portfolio-projects {
-
-    }
     .portfolio--types .btn {
         margin: 3rem .5rem 3rem 0;
         font-size: 0.8rem;
@@ -118,5 +115,8 @@
     }
     .projects--picture {
         width: 18rem;
+    }
+    .projects--description {
+        text-align: center;
     }
 }

@@ -4,8 +4,11 @@
     --bg-color: #FBFBFB;
 
     --color-grey: #445964;
+    --color-grey--hover: #5c7a8b;
     --color-dark-grey: #212529;
+    --color-dark-grey--hover: #48525b;
     --color-soft-grey: #DFDFDF;
+    --color-soft-grey--hover: #949494;
 
 
 
@@ -15,7 +18,8 @@
     --bg-color: #121212;
     --color-grey: #4764FD;
     --color-dark-grey: #4764FD;
-    --color-hover-dark-grey: #748aff;
+
+    
     --bs-tooptip: #4764FD;
 }
 
@@ -49,18 +53,29 @@ a {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    transition: all .5s ease;
 }
 .btn__dark-grey {
     background-color: var(--color-dark-grey);
     color: #FFF;
 }
+.btn__dark-grey:hover {
+    background-color: var(--color-dark-grey--hover);
+}
 .btn__grey {
     background-color: var(--color-grey);
     color: #FFF;
 }
+.btn__grey:hover {
+    background-color: var(--color-grey--hover);
+}
 .btn__soft-grey {
     background-color: var(--color-soft-grey);
-    color: var(--color-grey);
+    color: var(--color-dark-grey);
+}
+.btn__soft-grey:hover {
+    background-color: var(--color-soft-grey--hover);
+    color: #FFF;
 }
 .title--section {
     color: var(--color-grey);
@@ -175,6 +190,14 @@ a {
 /* SESSION ABOUT */
 .about {
     height: calc(100vh - var(--height-header));
+    position: relative;
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/person.svg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/person.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
 }
 .about--description {
     width: 42rem;
@@ -224,10 +247,12 @@ a {
 }
 
 .about--picture {
-    background-image:url(../images/person.svg);
+    position: relative;
+    /* background-image:url(../images/person.svg); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     flex: 1;
     max-width: 100%;
     height: auto;
@@ -273,6 +298,15 @@ a {
 }
 .portfolio--projects--item {
     width: 18rem;
+}
+.portfolio--projects--item .btn {
+    display: flex;
+    align-items: center;
+}
+.portfolio--projects--item img {
+    width: 20px;
+    margin-left: -5px;
+    margin-right: 10px;
 }
 .projects--picture {
     width: 100%;
