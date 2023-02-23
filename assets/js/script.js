@@ -19,7 +19,6 @@ document.querySelectorAll('.techs--logos__item').forEach(item =>{
     item.addEventListener('mouseout', hireSpan);
 });
 
-
 function filterDiv(e) {
     let clicked = e.currentTarget.getAttribute('data-bs-type');
     const obj = e.currentTarget;

@@ -44,9 +44,6 @@
         background-color: inherit;
         box-shadow: 2px 0px 4px 4px #CCC;
     }
-    .portfolio-projects {
-        grid-template-columns: repeat(1, 1fr);
-    }
     .portfolio--types {
         justify-content: center;
     }
@@ -85,6 +82,11 @@
         display: none;
     }
 }
+@media(max-width: 700px) {
+    .portfolio-projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 @media(max-width: 576px) {
     html {
@@ -115,6 +117,9 @@
     }
     .projects--picture {
         width: 18rem;
+    }
+    .projects--picture__area {
+        justify-content: center;
     }
     .projects--description {
         text-align: center;

@@ -84,42 +84,36 @@
                 </div>
                 <div class="portfolio-projects">
                     <div class="portfolio--projects--item" data-bs-type="fim">
-                        <div class="projects--picture"> FINALIZADO </div>
-                        <div class="projects--name">Nome do Projeto</div>
-                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--picture">
+                            <div class="projects--picture__area"><img src="assets/images/portfolios/pokedex.webp" alt=""></div>
+                        </div>
+                        <div class="projects--name">Pokedex</div>
+                        <div class="projects--description">Aplicação consumindo a API PokeAPI. Com uma listagem de todos pokemons, com o botão saiba mais, apresentando mais detalhes dos mesmos.</div>
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
-                        <button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button>
-                    </div>
-                    <div class="portfolio--projects--item" data-bs-type="fim">
-                        <div class="projects--picture"> FINALIZADO</div>
-                        <div class="projects--name">Nome do Projeto</div>
-                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
-                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
-                        <button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button>
+                        <a href="https://lucasmzta.github.io/pokedex-api" target="_blank"><button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button></a>
                     </div>
                     <div class="portfolio--projects--item" data-bs-type="and">
-                        <div class="projects--picture"> EM ANDAMENTO</div>
-                        <div class="projects--name">Nome do Projeto</div>
-                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
+                        <div class="projects--picture">
+                            <div class="projects--picture__area"><img src="assets/images/portfolios/pizza.webp" alt=""></div>
+                        </div>
+                        <div class="projects--name">Compra de Pizzas</div>
+                        <div class="projects--description">Projeto de compra de pizzas, com detalhes da compra no carrinho para quando aprtar em adicionar.</div>
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
-                        <button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button>
+                        <a href="https://lucasmzta.github.io/compra-pizzas/" target="_blank"><button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button></a>
                     </div>
                     <div class="portfolio--projects--item" data-bs-type="and">
-                        <div class="projects--picture"> EM ANDAMENTO</div>
+                        <div class="projects--picture">
+                            <div class="projects--picture__area"><div class="img">EM ANDAMENTO</div></div>
+                        </div>
                         <div class="projects--name">Nome do Projeto</div>
                         <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
                         <button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button>
                     </div>
                     <div class="portfolio--projects--item" data-bs-type="fim">
-                        <div class="projects--picture"> FINALIZADO </div>
-                        <div class="projects--name">Nome do Projeto</div>
-                        <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
-                        <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
-                        <button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button>
-                    </div>
-                    <div class="portfolio--projects--item" data-bs-type="fim">
-                        <div class="projects--picture">FINALIZADO</div>
+                        <div class="projects--picture">
+                            <div class="projects--picture__area"><div class="img">FINALIZADO</div></div>
+                        </div>
                         <div class="projects--name">Nome do Projeto</div>
                         <div class="projects--description">Breve descrição do que se trata o projeto e funcionalidade.</div>
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
@@ -179,20 +173,33 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="reserved-rights">
+                
+                Criado por Lucas Martins | &copy; 2023 - Todos os direitos reservados.
+
+            </div>
+            <div class="about--social-media">
+                <a class="social-media--item" href=""><i class="fa-brands fa-github"></i></a>
+                <a class="social-media--item" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="social-media--item" href=""><i class="fa-brands fa-instagram"></i></a>
+                <a class="social-media--item" href="https://wa.me/+5519998284188"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
 
     </footer>
     <!-- SCRIPT JS INDIVIDUAL -->
-    <script type="text/JavaScript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         const sr = ScrollReveal({
-            origin: 'top',
-            distance: '50px',
+            origin: 'bottom',
+            distance: '100px',
             duration: 2000,
             reset: true
         });
-        ScrollReveal().reveal('.techs--logos', { delay: 400 });
+        ScrollReveal().reveal('.techs--logos', { delay: 100 });
 
         const src = ScrollReveal({
             origin: 'left',
@@ -201,7 +208,13 @@
             reset: true
         });
         ScrollReveal().reveal('.portfolio--projects--item', { delay: 200 });
-        ScrollReveal().reveal('.about--picture', { delay: 400 });
+        ScrollReveal().reveal('.about--description', { delay: 200 });
+        ScrollReveal().reveal('.about--description__title', { delay: 400 });
+        ScrollReveal().reveal('.about--btn', { delay: 600 });
+        ScrollReveal().reveal('.about--social-media', { delay: 800 });
+
+        ScrollReveal().reveal('.footer .about--social-media', { delay: 400 });
+        ScrollReveal().reveal('.reserved-rights', { delay: 400 });    
 </script>
 </body>
 
