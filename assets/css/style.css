@@ -349,7 +349,7 @@ a {
 
 /* SESSION TECHS */
 .techs {
-    height: 100vh;
+    min-height: 100vh;
 }
 .techs .container {
     flex-direction: column;
