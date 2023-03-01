@@ -26,11 +26,18 @@
     .portfolio-projects {
         grid-template-columns: repeat(2, 1fr);
     }
+    .techs--logos__item i {
+        font-size: 5.5em;
+    }
 }
 
 @media(max-width: 769px) {
     :root {
         --height-header: 60px;
+    }
+    .techs .title--section {
+        font-size: 1.7em;
+        padding: 2rem 0 3rem 0;
     }
     .container {
         width: 100vw;
@@ -80,6 +87,15 @@
     }
     .about--picture {
         display: none;
+    }
+    .techs {
+        min-height: auto;
+    }
+    .techs--title {
+        font-size: 1em;
+    }
+    .techs--logos__item i {
+        font-size: 4em;
     }
 }
 @media(max-width: 700px) {

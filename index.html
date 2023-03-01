@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/responsivo.css">
     <!-- Font Icons -->
     <script src="https://kit.fontawesome.com/78ae205c21.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body id="home">
@@ -50,7 +51,7 @@
     <main>
         <section class="about" id="about">
             <div class="container">
-                <div class="about--description">
+                <div class="about--description load-hidden">
                     <div class="about--description__title">
                         <p>Olá,</p>
                         <h2>EU SOU UM <br> PROGRAMADOR</h2>
@@ -83,7 +84,7 @@
                     <button class="btn btn__soft-grey" data-bs-type="and">Andamento</button>
                 </div>
                 <div class="portfolio-projects">
-                    <div class="portfolio--projects--item" data-bs-type="fim">
+                    <div class="portfolio--projects--item load-hidden" data-bs-type="fim">
                         <div class="projects--picture">
                             <div class="projects--picture__area"><img src="assets/images/portfolios/pokedex.webp" alt=""></div>
                         </div>
@@ -92,7 +93,7 @@
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
                         <a href="https://lucasmzta.github.io/pokedex-api" target="_blank"><button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button></a>
                     </div>
-                    <div class="portfolio--projects--item" data-bs-type="and">
+                    <div class="portfolio--projects--item load-hidden" data-bs-type="and">
                         <div class="projects--picture">
                             <div class="projects--picture__area"><img src="assets/images/portfolios/pizza.webp" alt=""></div>
                         </div>
@@ -101,7 +102,7 @@
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
                         <a href="https://lucasmzta.github.io/compra-pizzas/" target="_blank"><button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button></a>
                     </div>
-                    <div class="portfolio--projects--item" data-bs-type="and">
+                    <div class="portfolio--projects--item load-hidden" data-bs-type="and">
                         <div class="projects--picture">
                             <div class="projects--picture__area"><div class="img">EM ANDAMENTO</div></div>
                         </div>
@@ -110,7 +111,7 @@
                         <div class="projects--tech">Tecnologias: HTML, CSS e JS.</div>
                         <button class="btn btn__grey"><img src="assets/images/link.svg" alt=""> Visualizar</button>
                     </div>
-                    <div class="portfolio--projects--item" data-bs-type="fim">
+                    <div class="portfolio--projects--item load-hidden" data-bs-type="fim">
                         <div class="projects--picture">
                             <div class="projects--picture__area"><div class="img">FINALIZADO</div></div>
                         </div>
@@ -134,7 +135,7 @@
                             <p>Tecnologias</p> 
                             <p>Utilizadas no <span>dia a dia</span></p>
                         </div>
-                        <div class="techs--logos">
+                        <div class="techs--logos load-hidden">
                             <div class="techs--logos__item">
                                 <i class="fa-brands fa-html5"></i> <span>HTML 5</span>
                             </div>
@@ -175,12 +176,12 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="reserved-rights">
+            <div class="reserved-rights load-hidden">
                 
                 Criado por Lucas Martins | &copy; 2023 - Todos os direitos reservados.
 
             </div>
-            <div class="about--social-media">
+            <div class="about--social-media load-hidden">
                 <a class="social-media--item" href=""><i class="fa-brands fa-github"></i></a>
                 <a class="social-media--item" href=""><i class="fa-brands fa-linkedin-in"></i></a>
                 <a class="social-media--item" href=""><i class="fa-brands fa-instagram"></i></a>
@@ -191,21 +192,20 @@
     </footer>
     <!-- SCRIPT JS INDIVIDUAL -->
     <script type="text/javascript" src="assets/js/script.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         const sr = ScrollReveal({
             origin: 'bottom',
-            distance: '100px',
-            duration: 2000,
-            reset: true
+            distance: '50px',
+            duration: 1200 //,
+            // reset: true
         });
-        ScrollReveal().reveal('.techs--logos', { delay: 100 });
+        ScrollReveal().reveal('.techs--logos', { delay: 200 });
 
         const src = ScrollReveal({
             origin: 'left',
             distance: '50px',
-            duration: 2000,
-            reset: true
+            duration: 1200 //,
+            // reset: true
         });
         ScrollReveal().reveal('.portfolio--projects--item', { delay: 200 });
         ScrollReveal().reveal('.about--description', { delay: 200 });

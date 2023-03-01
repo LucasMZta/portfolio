@@ -20,7 +20,9 @@
     
     --bs-tooptip: #4764FD;
 }
-
+html.sr .load-hidden {
+    visibility: hidden;
+}
 /* GENERAL CSS */
 * {
     margin: 0;
