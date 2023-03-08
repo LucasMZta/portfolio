@@ -71,7 +71,6 @@ function showSpan(e) {
     }, 300);
 }
 function hireSpan(e) {
-    console.log('sumiu')
     let span = e.currentTarget.querySelector('span');
     span.style.top = `0`;
     span.style.display = 'none';

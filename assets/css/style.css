@@ -351,6 +351,7 @@ a {
 
 /* SESSION TECHS */
 .techs {
+    display: flex;
     min-height: 100vh;
 }
 .techs .container {
@@ -358,6 +359,7 @@ a {
 }
 .techs .title--section {
     width: 100%;
+    padding: 2em;
     text-align: center;
 }
 .techs--skills {
@@ -419,7 +421,8 @@ a {
 
 /* FOOTER */
 .footer {
-    height: 5rem;
+    overflow: hidden;
+    height: 8rem;
 }
 .footer .container {
     justify-content: space-between;
